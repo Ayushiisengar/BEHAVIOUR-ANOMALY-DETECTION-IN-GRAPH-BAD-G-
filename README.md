@@ -1,33 +1,75 @@
 # Behavioral Anomaly Detection in Graphs (BAD-G)
 
-## Overview
-BAD-G is a cutting-edge project that employs generative AI techniques to analyze dynamic graphs for behavioral anomalies. The goal is to detect unusual patterns in social or network graphs, enabling early detection of malicious activity, fraud, or unexpected behavior.
+This project provides a web application that visualizes a graph and performs anomaly detection on its nodes. The graph represents a social network of users, and the anomalies in the network are highlighted through color-coded nodes.
 
 ## Features
-- **Dynamic Graph Analysis**: Monitors graph changes over time.
-- **Anomaly Detection**: Identifies irregular behavior patterns in nodes or edges.
-- **Generative AI Integration**: Leverages generative models for enhanced prediction.
-- **Customizable**: Adaptable for various applications like cybersecurity, fraud detection, and social network analysis.
 
-## Applications
-- Cybersecurity: Identify unusual behaviors in network traffic.
-- Fraud Detection: Spot fraudulent transactions in financial systems.
-- Social Behavior Analysis: Detect anomalous interactions in social networks.
+- **Graph Visualization**: Visualizes the graph using Plotly, where nodes represent users and edges represent relationships between them.
+- **Anomaly Detection**: Nodes are color-coded to highlight anomalies (10% of the nodes are randomly marked as anomalous for demonstration purposes).
+- **User Details**: Clicking on a node shows user-specific data (name, email, role, etc.) using Flask routes.
+- **Graph Sampling**: Allows sampling of the graph to reduce its size for faster rendering (5% of the nodes are displayed by default).
 
-## How It Works
-1. **Graph Input**: Accepts dynamic graphs as input.
-2. **Behavioral Analysis**: Uses generative models to analyze node/edge interactions.
-3. **Anomaly Identification**: Flags suspicious activities or outliers.
-4. **Visualization**: Provides graphical outputs for anomaly representation.
+## Project Structure
 
-## Technology Stack
-- **Frontend**: HTML/CSS (for showcasing results)
-- **Backend**: Python (Flask)
-- **Database**: MySQL
-- **AI/ML Models**: PyTorch, TensorFlow, or similar frameworks
-- **Graph Library**: NetworkX or GraphFrames
+project/ 
+├── app.py
+├── data/ 
+│ ├── synthetic_data.json 
+│ ├── processed_graph.json 
+├── templates/ 
+│ ├── index.html
+│ ├── graph.html 
+│ ├── user_details.html 
+├── static/ 
+│ ├── styles.css
+└── utils/ 
+├── data_generator.py 
+├── graph_builder.py
+├── anomaly_detector.py
 
-## Getting Started
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/Behavioral-Anomaly-Detection-in-Graphs.git
+
+## Setup Instructions
+
+### Prerequisites
+- Python 3.x
+- Flask
+- NetworkX
+- Plotly
+- JSON
+
+### Step 1: Install Dependencies
+
+Create a virtual environment (optional but recommended):
+
+python -m venv venv
+source venv/bin/activate
+
+## Install the required packages:
+
+bash
+Copy code
+pip install flask networkx plotly
+### Step 2: Prepare the Graph Data
+Make sure that your graph data is available in data/processed_graph.json. If you don't have this file, you can generate the graph using the data_generator.py and graph_builder.py scripts.
+
+### Step 3: Run the Flask Application
+To start the Flask server, run the following command:
+
+bash
+Copy code
+python app.py
+This will start the application at http://127.0.0.1:5000/.
+
+### Step 4: Interact with the Application
+Homepage: The homepage (index.html) shows an introduction to the project.
+Graph Visualization: Navigate to /graph to see the graph visualization, where nodes are color-coded to distinguish normal and anomalous nodes.
+User Details: Click on a node to view detailed information about the user (name, email, role).
+Customization
+Node Color Scheme: The nodes are colored randomly for demonstration purposes (anomalous nodes are red and normal nodes are green). You can update the logic to implement actual anomaly detection.
+Sampling: The graph is sampled to display a fraction (5% by default) of the nodes for faster rendering.
+
+
+
+
+
+
