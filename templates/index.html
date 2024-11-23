@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAD-G: Behavioral Anomaly Detection in Graphs</title>
+    <style>
+        /* General Styling */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            background: linear-gradient(to bottom right, #001f3f, #0074D9);
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-bottom: 3px solid #0074D9;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            animation: slideIn 2s ease-in-out;
+        }
+
+        .features-section {
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .features-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .feature-box {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #0074D9;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: left;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .feature-box:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .feature-box h3 {
+            font-size: 1.5rem;
+            color: #FFD700;
+            margin-bottom: 10px;
+        }
+
+        .feature-box p {
+            font-size: 1rem;
+            color: #DDDDDD;
+        }
+
+        .view-graph-button {
+            display: block;
+            margin: 40px auto;
+            padding: 15px 30px;
+            background: #0074D9;
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            animation: bounce 2s infinite;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .view-graph-button:hover {
+            background: #0056a3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-top: 3px solid #0074D9;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateY(-20px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to BAD-G</h1>
+        <p>Your premier platform for Behavioral Anomaly Detection in Graphs</p>
+    </header>
+
+    <div class="features-section">
+        <h2>Our Features</h2>
+        <div class="features">
+            <div class="feature-box">
+                <h3>Dynamic Graph Analysis</h3>
+                <p>Analyze and detect anomalies in dynamic social graphs using cutting-edge AI algorithms.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Interactive Visualizations</h3>
+                <p>Explore graph structures and behavioral insights with intuitive and engaging visual tools.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Real-Time Monitoring</h3>
+                <p>Stay updated with real-time anomaly detection and behavioral analytics.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Customizable Insights</h3>
+                <p>Tailor anomaly detection metrics to suit your specific organizational needs.</p>
+            </div>
+        </div>
+    </div>
+
+    <a href="/graph" class="view-graph-button">View Graph</a>
+
+    <footer>
+        <p>&copy; 2024 BAD-G. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
